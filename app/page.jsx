@@ -15,7 +15,8 @@ const Home = () => {
       </p>
       <Feed />
       <div className="mt-4 w-full flex-center bg-gradient-to-r from-blue-500 to-purple-800 rounded-lg p-4 animate-pulse">
-        <p className="text-center text-white">Currently under construction...</p>
+        <p className="text-center text-white">👨‍💻 Currently under construction... 🚧 <br />
+Just me tinkering with the code. Stay tuned for updates! 🚀</p>
       </div>
     </section>
   );
