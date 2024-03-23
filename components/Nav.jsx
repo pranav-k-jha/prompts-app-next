@@ -29,7 +29,7 @@ const Nav = () => {
           height={30}
           className="object-contain"
         />
-        <p className="logo_text">Prompts App</p>
+        <p className="logo_text">Prompts</p>
       </Link>
 
       <div className="sm:flex hidden">
