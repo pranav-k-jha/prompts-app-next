@@ -6,8 +6,11 @@ import { useRouter } from "next/navigation";
 
 import Form from "@components/Form";
 
-const page = () => {
-  const [submitting, setSubmitting] = useState(false);
+const CreatePrompt = () => {
+  const router = useRouter();
+  const { data: session } = useSession();
+
+  const [submitting, setIsSubmitting] = useState(false);
   const [post, setPost] = useState({
     prompt: "",
     tag: "  ",
@@ -15,7 +18,7 @@ const page = () => {
 
   const createPrompt = async (e) => {
     e.preventDefault();
-    setSubmitting(true);
+    setIsSubmitting(true);
     try {
       const response = await fetch("/api/prompt/new", {
         method: "POST",
@@ -31,7 +34,7 @@ const page = () => {
     } catch (error) {
       console.log(error);
     } finally {
-      setSubmitting(false);
+      setIsSubmitting(false);
     }
   };
   return (
@@ -45,4 +48,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default CreatePrompt;
