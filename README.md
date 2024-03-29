@@ -16,17 +16,3 @@ The Prompts App is built using the following technologies:
 - Next.js: A React framework for building server-side rendered web applications.
 - Tailwind CSS: A utility-first CSS framework for rapid UI development.
 
-## Get Started
-
-To get started with the Prompts App, follow these steps:
-
-1. Clone this repository to your local machine.
-2. Install dependencies using `npm install` or `yarn install`.
-3. Start the development server with `npm run dev` or `yarn dev`.
-4. Access the app in your web browser at `http://localhost:3000`.
-
-## Contributing
-
-We welcome contributions from the community! If you have ideas for new features, bug fixes, or improvements, please submit a pull request or open an issue on GitHub.
-
-Happy prompting!
