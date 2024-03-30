@@ -3,6 +3,12 @@ import Feed from "@components/Feed";
 const Home = () => {
   return (
     <section className="w-full flex-center flex-col">
+      <div className="mt-4 w-full flex-center bg-gradient-to-r from-blue-500 to-purple-800 rounded-lg p-4 animate-pulse">
+        <p className="text-center text-white">
+          👨‍💻 Currently under construction... 🚧 <br />
+          Just me tinkering with the code. Stay tuned for updates! 🚀
+        </p>
+      </div>
       <h1 className="head_text text-center">
         Discover and Share
         <br className="max-md:hidden" />
@@ -14,10 +20,6 @@ const Home = () => {
         effortlessly.
       </p>
       <Feed />
-      <div className="mt-4 w-full flex-center bg-gradient-to-r from-blue-500 to-purple-800 rounded-lg p-4 animate-pulse">
-        <p className="text-center text-white">👨‍💻 Currently under construction... 🚧 <br />
-Just me tinkering with the code. Stay tuned for updates! 🚀</p>
-      </div>
     </section>
   );
 };
