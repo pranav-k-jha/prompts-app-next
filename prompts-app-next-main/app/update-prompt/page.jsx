@@ -1,20 +1,17 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
 import Form from "@components/Form";
 
-const EditPrompt = () => {
+const UpdatePrompt = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const promptId = searchParams.get("id");
 
+  const [post, setPost] = useState({ prompt: "", tag: "", });
   const [submitting, setIsSubmitting] = useState(false);
-  const [post, setPost] = useState({
-    prompt: "",
-    tag: "",
-  });
 
   useEffect(() => {
     const getPromptDetails = async () => {
@@ -26,13 +23,16 @@ const EditPrompt = () => {
         tag: data.tag,
       });
     };
+
     if (promptId) getPromptDetails();
   }, [promptId]);
 
   const updatePrompt = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+
     if (!promptId) return alert("Missing PromptId!");
+
     try {
       const response = await fetch(`/api/prompt/${promptId}`, {
         method: "PATCH",
@@ -41,6 +41,7 @@ const EditPrompt = () => {
           tag: post.tag,
         }),
       });
+
       if (response.ok) {
         router.push("/");
       }
@@ -50,17 +51,16 @@ const EditPrompt = () => {
       setIsSubmitting(false);
     }
   };
+
   return (
     <Form
-      type="Edit"
+      type='Edit'
       post={post}
       setPost={setPost}
       submitting={submitting}
       handleSubmit={updatePrompt}
     />
-
-
   );
 };
 
-export default EditPrompt;
+export default UpdatePrompt;
