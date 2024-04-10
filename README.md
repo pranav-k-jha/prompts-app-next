@@ -1,6 +1,6 @@
 # Prompts App
 
-Welcome to the Prompts App, an AI-based prompting tool designed to ignite creativity and inspiration! Whether you're a writer, artist, educator, or simply someone looking for new ideas, our app is here to help you discover and share a wide range of creative prompts.
+Welcome to the Prompts App, designed to ignite creativity and inspiration! Whether you're a writer, artist, educator, or simply someone looking for new ideas, our app is here to help you discover and share a wide range of creative prompts.
 
 ## Features
 
